@@ -1,0 +1,393 @@
+.experience {
+  padding: 5rem 0;
+  background: white;
+}
+
+.dark-mode .experience {
+  background: #111827;
+}
+
+.experience-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 1rem 0;
+}
+
+.dark-mode .section-title {
+  color: #f1f5f9;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.dark-mode .section-subtitle {
+  color: #94a3b8;
+}
+
+.experience-timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e5e7eb;
+}
+
+.dark-mode .experience-timeline::before {
+  background: #374151;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  animation: slideInLeft 0.6s ease-out both;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -2rem;
+  top: 0;
+  width: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.marker-dot {
+  width: 16px;
+  height: 16px;
+  background: #2563eb;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 0 0 2px #e5e7eb;
+  z-index: 2;
+  position: relative;
+}
+
+.dark-mode .marker-dot {
+  border-color: #111827;
+  box-shadow: 0 0 0 2px #374151;
+}
+
+.marker-line {
+  width: 2px;
+  height: 100%;
+  background: #e5e7eb;
+  margin-top: 16px;
+}
+
+.dark-mode .marker-line {
+  background: #374151;
+}
+
+.timeline-content {
+  margin-left: 2rem;
+}
+
+.experience-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark-mode .experience-card {
+  background: #1f293b;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .experience-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+  padding: 2rem 2rem 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.dark-mode .card-header {
+  border-color: #374151;
+}
+
+.company-info h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 0.5rem 0;
+}
+
+.dark-mode .company-info h3 {
+  color: #f1f5f9;
+}
+
+.position-duration {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.position {
+  font-weight: 600;
+  color: #2563eb;
+  font-size: 1.1rem;
+}
+
+.dark-mode .position {
+  color: #60a5fa;
+}
+
+.duration {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.dark-mode .duration {
+  color: #94a3b8;
+}
+
+.company-logo {
+  flex-shrink: 0;
+}
+
+.logo-placeholder {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.card-body {
+  padding: 1.5rem 2rem;
+}
+
+.experience-description {
+  color: #4b5563;
+  line-height: 1.7;
+  margin: 0 0 1.5rem 0;
+  font-size: 1rem;
+}
+
+.dark-mode .experience-description {
+  color: #d1d5db;
+}
+
+.experience-highlights h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 1rem 0;
+}
+
+.dark-mode .experience-highlights h4 {
+  color: #f1f5f9;
+}
+
+.experience-highlights ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-highlights li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.dark-mode .experience-highlights li {
+  color: #94a3b8;
+}
+
+.experience-highlights li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-weight: 600;
+}
+
+.card-footer {
+  padding: 1rem 2rem 2rem 2rem;
+  background: #f8fafc;
+  border-top: 1px solid #f3f4f6;
+}
+
+.dark-mode .card-footer {
+  background: #111827;
+  border-color: #374151;
+}
+
+.tech-stack {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tech-label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.dark-mode .tech-label {
+  color: #d1d5db;
+}
+
+.tech-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tech-tag {
+  background: #e5e7eb;
+  color: #6b7280;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.dark-mode .tech-tag {
+  background: #374151;
+  color: #d1d5db;
+}
+
+.experience-summary {
+  margin-top: 4rem;
+  text-align: center;
+  padding: 3rem;
+  background: #f8fafc;
+  border-radius: 16px;
+}
+
+.dark-mode .experience-summary {
+  background: #1f293b;
+}
+
+.summary-content h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 1rem 0;
+}
+
+.dark-mode .summary-content h3 {
+  color: #f1f5f9;
+}
+
+.summary-content p {
+  color: #6b7280;
+  margin: 0 0 2rem 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dark-mode .summary-content p {
+  color: #94a3b8;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-timeline {
+    padding-left: 1rem;
+  }
+
+  .experience-timeline::before {
+    left: 0.5rem;
+  }
+
+  .timeline-marker {
+    left: -1rem;
+  }
+
+  .timeline-content {
+    margin-left: 1rem;
+  }
+
+  .card-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .card-header,
+  .card-body,
+  .card-footer {
+    padding: 1rem;
+  }
+
+  .experience-summary {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-container {
+    padding: 0 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .company-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .position {
+    font-size: 1rem;
+  }
+}
