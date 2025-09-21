@@ -8,7 +8,7 @@
     {
       "src": "portfolio-frontend/package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "portfolio-frontend/build" }
+      "config": { "distDir": "build" }
     }
   ],
   "routes": [
