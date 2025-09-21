@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
+const { ipKeyGenerator } = require('express-rate-limit');
 require('dotenv').config();
 
 const Contact = require('./models/Contact');
@@ -44,10 +45,7 @@ app.set('trust proxy', 1);
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // limit each IP to 100 requests per windowMs
-  keyGenerator: (req) => {
-    // Use X-Forwarded-For header if present, else fallback to req.ip
-    return req.headers['x-forwarded-for'] || req.ip;
-  }
+  keyGenerator: ipKeyGenerator
 });
 app.use(limiter);
 
