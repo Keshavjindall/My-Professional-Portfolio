@@ -230,6 +230,16 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
+const path = require('path');
+
+// Serve static frontend files
+app.use(express.static(path.join(__dirname, 'portfolio-frontend', 'build')));
+
+// Catch-all route to serve index.html for client-side routing
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'portfolio-frontend', 'build', 'index.html'));
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
