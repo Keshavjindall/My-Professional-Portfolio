@@ -19,7 +19,7 @@ const allowedOrigins = [
   'http://localhost:3001',
   process.env.FRONTEND_URL,
   process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null,
-  process.env.NODE_ENV === 'production' ? 'https://your-portfolio.vercel.app' : null
+  process.env.NODE_ENV === 'production' ? 'https://keshavjindal-portfolio.vercel.app' : null
 ].filter(Boolean);
 
 app.use(cors({
