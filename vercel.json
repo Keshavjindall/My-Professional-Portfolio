@@ -2,14 +2,23 @@
   "version": 2,
   "builds": [
     {
-      "src": "./server.js",
+      "src": "server.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "portfolio-frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "portfolio-frontend/build" }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
       "dest": "/server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/portfolio-frontend/$1"
     }
   ]
 }
