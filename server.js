@@ -37,10 +37,17 @@ app.use(cors({
   credentials: true
 }));
 
+// Trust proxy for rate limiting behind proxies like Vercel
+app.set('trust proxy', 1);
+
 // Rate limiting
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100 // limit each IP to 100 requests per windowMs
+  max: 100, // limit each IP to 100 requests per windowMs
+  keyGenerator: (req) => {
+    // Use X-Forwarded-For header if present, else fallback to req.ip
+    return req.headers['x-forwarded-for'] || req.ip;
+  }
 });
 app.use(limiter);
 
